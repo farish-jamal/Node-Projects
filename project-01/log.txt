@@ -56,3 +56,15 @@
 1706115000044 : /api/users/65b13fa4c13c549d2e5bf32c : ::1 : PATCH
 1706115008442 : /api/users/65b13fa4c13c549d2e5bf32c : ::1 : DELETE
 1706115012154 : /api/users/ : ::1 : GET
+1706116783200 : /api/users/ : ::1 : GET
+1706118235246 : /api/users/ : ::1 : GET
+1706118255768 : /api/users/ : ::1 : POST
+1706118261334 : /api/users/ : ::1 : GET
+1706118271877 : /api/users/65b14c6f508f1768de2e266e : ::1 : GET
+1706118279236 : /api/users/65b14c6f508f1768de2e266e : ::1 : PATCH
+1706118286745 : /api/users/ : ::1 : GET
+1706118294379 : /api/users/65b14c6f508f1768de2e266e : ::1 : DELETE
+1706118298218 : /api/users/ : ::1 : GET
+1706118303143 : /api/users/ : ::1 : POST
+1706118307825 : /api/users/ : ::1 : POST
+1706118311872 : /api/users/ : ::1 : GET
