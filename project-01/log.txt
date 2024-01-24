@@ -68,3 +68,9 @@
 1706118303143 : /api/users/ : ::1 : POST
 1706118307825 : /api/users/ : ::1 : POST
 1706118311872 : /api/users/ : ::1 : GET
+1706118947752 : /api/users/ : ::1 : GET
+1706118956182 : /api/users/ : ::1 : POST
+1706118960702 : /api/users/ : ::1 : GET
+1706118970955 : /api/users/65b14f2c9a1abb56707e72a3 : ::1 : GET
+1706118979224 : /api/users/65b14f2c9a1abb56707e72a3 : ::1 : DELETE
+1706118984937 : /api/users/ : ::1 : GET
