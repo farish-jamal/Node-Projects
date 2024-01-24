@@ -1,7 +1,0 @@
-1706029935188 : /api/users/ : ::1 : POST
-1706029974478 : /api/users/ : ::1 : POST
-1706029980410 : /api/users/ : ::1 : GET
-1706029986811 : /api/users/992 : ::1 : DELETE
-1706029991467 : /api/users/11 : ::1 : PATCH
-1706030044392 : /api/users/991 : ::1 : DELETE
-1706030054952 : /api/users/991 : ::1 : DELETE
