@@ -3,6 +3,7 @@ const path = require("path");
 
 const { mongoDbConnection } = require("./database/db");
 const urlRoute = require("./routers/url.routers");
+const staticRoute = require("./routers/static.routers");
 
 const app = express();
 const PORT = 8001;
@@ -18,6 +19,7 @@ mongoDbConnection(
   "mongodb+srv://farishjamal:OpLtuOvUoEQlFItl@url-shortner.3dhfi68.mongodb.net/?retryWrites=true&w=majority"
 ).then(()=>{console.log("Database connected Succesfully!")});
 
+app.use('/', staticRoute);
 app.use('/api/url', urlRoute);
 
 app.listen(PORT, () => {
