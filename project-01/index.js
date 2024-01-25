@@ -2,7 +2,7 @@ const express = require("express");
 
 const { connectionDB } = require("./database/db");
 const userRoute = require("./routes/user.routes");
-const {logReqRes} = require("./middlewares/log.middlewares");
+const { logReqRes } = require("./middlewares/log.middlewares");
 
 const app = express();
 const PORT = 8000;
@@ -21,7 +21,6 @@ connectionDB(
 
 // Routes:
 app.use("/api/users", userRoute);
-
 
 //Server
 app.listen(PORT, () => {
