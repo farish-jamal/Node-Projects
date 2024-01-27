@@ -22,7 +22,9 @@ async function handleuserLogin(req, res){
  const {email, password} = req.body;
  const user = await User.findOne({email, password});
  if(!user){
-  res.redirect("/user/login");
+  res.render("login", {
+   errorMsg: "No User Found Macthing The Entry!"
+  });
  }
   res.redirect("/");
 } 
