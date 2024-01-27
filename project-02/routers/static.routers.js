@@ -1,10 +1,11 @@
 const express = require("express");
 const { handleGetUrl } = require("../controllers/url.controllers");
-const {handleGetLoginPage} = require("../controllers/user.controllers");
+const { handleGetSignUpPage, handleGetLoginPage} = require("../controllers/user.controllers");
 
 const router = express.Router();
 
 router.get("/", handleGetUrl);
-router.get("/user", handleGetLoginPage);
+router.get("/user/login", handleGetLoginPage)
+router.get("/user/signup", handleGetSignUpPage);
 
 module.exports = router;
