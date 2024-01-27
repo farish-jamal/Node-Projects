@@ -3,11 +3,11 @@ const User = require("../models/user.models");
 const {setUser, getUser} = require("../ulits/auth.utils");
 
 function handleGetSignUpPage(req, res){
- res.render("signup");
+ return res.render("signup");
 }
 
 function handleGetLoginPage(req, res){
- res.render("login");
+ return res.render("login");
 }
 
 async function handleCreateUser(req, res){
@@ -24,14 +24,14 @@ async function handleuserLogin(req, res){
  const {email, password} = req.body;
  const user = await User.findOne({email, password});
  if(!user){
-  res.render("login", {
+  return res.render("login", {
    errorMsg: "No User Found Macthing The Entry!"
   });
  }
   const sessionId = uuidv4();
   setUser(sessionId, user);
   res.cookie("uid", sessionId);
-  res.redirect("/");
+  return res.redirect("/");
 } 
 
 module.exports = {

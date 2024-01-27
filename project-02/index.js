@@ -1,10 +1,12 @@
 const express = require("express");
 const path = require("path");
+const cookieParser = require("cookie-parser");
 
 const { mongoDbConnection } = require("./database/db");
 const urlRoute = require("./routers/url.routers");
 const staticRoute = require("./routers/static.routers");
 const userRoute = require("./routers/user.routers")
+const {restrictToLoginUser} = require("./middleware/auth.middleware");
 
 const app = express();
 const PORT = 8001;
@@ -14,6 +16,7 @@ app.set("views", path.resolve("./views"));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 //Database Connection
 mongoDbConnection(
@@ -23,7 +26,7 @@ mongoDbConnection(
 });
 
 app.use("/", staticRoute);
-app.use("/api/url", urlRoute);
+app.use("/api/url", restrictToLoginUser, urlRoute);
 app.use("/user", userRoute);
 
 app.listen(PORT, () => {
