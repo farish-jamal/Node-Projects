@@ -1,4 +1,3 @@
-const { v4: uuidv4 } = require('uuid');
 const User = require("../models/user.models");
 const {setUser, getUser} = require("../ulits/auth.utils");
 
@@ -28,8 +27,7 @@ async function handleuserLogin(req, res){
    errorMsg: "No User Found Macthing The Entry!"
   });
  }
-  const sessionId = uuidv4();
-  setUser(sessionId, user);
+  const sessionId = setUser(user);
   res.cookie("uid", sessionId);
   return res.redirect("/");
 } 
