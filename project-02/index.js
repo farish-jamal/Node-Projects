@@ -6,7 +6,7 @@ const { mongoDbConnection } = require("./database/db");
 const urlRoute = require("./routers/url.routers");
 const staticRoute = require("./routers/static.routers");
 const userRoute = require("./routers/user.routers")
-const {restrictToLoginUser, checkAuth} = require("./middleware/auth.middleware");
+const { restrictToLoginUser, checkAuth } = require("./middleware/auth.middleware");
 
 const app = express();
 const PORT = 8001;
