@@ -2,7 +2,8 @@ const Url = require("../models/url.models");
 const shortID = require("shortid");
 
 async function handleGetUrl(req, res) {
-  const urls = await Url.find({});
+  if(!req.user) return res.redirect("/user/login");
+  const urls = await Url.find({createdBy: req.user._id});
   res.render("home", {
     urls: urls,
   });
@@ -14,6 +15,7 @@ async function handleCreateShortId(req, res) {
   await Url.create({
     shortId: short,
     redirectId: body.url,
+    createdBy: req.user._id,
   });
   return res.redirect("/");
 }
