@@ -1,6 +1,6 @@
 const OpenAI =  require("openai");
 const openai = new OpenAI({
- apiKey: "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",
+ apiKey: "",
 });
 async function main() {
   const completion = await openai.chat.completions.create({
@@ -12,8 +12,12 @@ async function main() {
 
 
 async function handleOpenAiResponse(req, res){
+ const {prompt} = req.body;
  const response = await main();
- console.log(response);
+ return res.render("home", {
+  response: response,
+  prompt: prompt 
+ });
 }
 
 module.exports = {
