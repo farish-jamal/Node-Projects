@@ -20,7 +20,7 @@ app.use(cookieParser());
 
 //Database Connection
 mongoDbConnection(
-  "mongodb+srv://farishjamal:OpLtuOvUoEQlFItl@url-shortner.3dhfi68.mongodb.net/?retryWrites=true&w=majority"
+  "mongodb+srv://farishjamal:OpLtuOvUoEQlFItuserl@url-shortner.3dhfi68.mongodb.net/?retryWrites=true&w=majority"
 ).then(() => {
   console.log("Database connected Succesfully!");
 });

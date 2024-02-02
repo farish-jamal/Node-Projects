@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const responseRoute = require("./routes/response.routes");
+const staticRoute = require("./routes/static.routes");
 const {handleDatabaseConnection} = require("./databse/db.conndction");
 
 const app = express();
@@ -17,6 +18,7 @@ handleDatabaseConnection("mongodb+srv://farishjamal98:g0VIVMpDHaMTEAMz@chatbot.s
 })
 
 app.use("/api", responseRoute);
+app.use("/", staticRoute);
 
 app.listen(PORT, ()=>{
  console.log("Server started");
